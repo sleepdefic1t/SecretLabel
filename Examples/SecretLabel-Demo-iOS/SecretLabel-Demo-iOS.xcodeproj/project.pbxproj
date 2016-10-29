@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4738C061DB787590090B989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4738C051DB787590090B989 /* AppDelegate.swift */; };
+		F4738C081DB787590090B989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4738C071DB787590090B989 /* ViewController.swift */; };
+		F4738C0D1DB787590090B989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4738C0C1DB787590090B989 /* Assets.xcassets */; };
+		F4738C1B1DB787590090B989 /* SecretLabel_Demo_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4738C1A1DB787590090B989 /* SecretLabel_Demo_iOSTests.swift */; };
+		F4738C261DB7878B0090B989 /* SDGSecretLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4738C251DB7878B0090B989 /* SDGSecretLabel.framework */; };
+		F4738C271DB7878B0090B989 /* SDGSecretLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4738C251DB7878B0090B989 /* SDGSecretLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4738C2B1DB787CF0090B989 /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4738C2A1DB787CF0090B989 /* SecretViewController.swift */; };
+		F4CA61FB1DBE931A004A467B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CA61FA1DBE931A004A467B /* LaunchScreen.storyboard */; };
+		F4CA61FF1DC0BF25004A467B /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA61FE1DC0BF25004A467B /* LCDBackgroundView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4738C171DB787590090B989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4738BFA1DB787590090B989 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4738C011DB787590090B989;
+			remoteInfo = "SecretLabel-Demo-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4738C281DB7878B0090B989 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4738C271DB7878B0090B989 /* SDGSecretLabel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F4738C021DB787590090B989 /* SecretLabel-Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SecretLabel-Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4738C051DB787590090B989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F4738C071DB787590090B989 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F4738C0C1DB787590090B989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "SecretLabel-Demo-iOS/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		F4738C111DB787590090B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4738C161DB787590090B989 /* SecretLabel-Demo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SecretLabel-Demo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4738C1A1DB787590090B989 /* SecretLabel_Demo_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SecretLabel_Demo_iOSTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F4738C1C1DB787590090B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4738C251DB7878B0090B989 /* SDGSecretLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDGSecretLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4738C2A1DB787CF0090B989 /* SecretViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SecretViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F4CA61FA1DBE931A004A467B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4CA61FE1DC0BF25004A467B /* LCDBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LCDBackgroundView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4738BFF1DB787590090B989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4738C261DB7878B0090B989 /* SDGSecretLabel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4738C131DB787590090B989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4738BF91DB787590090B989 = {
+			isa = PBXGroup;
+			children = (
+				F4738C041DB787590090B989 /* SecretLabel-Demo-iOS */,
+				F4738C191DB787590090B989 /* SecretLabel-Demo-iOSTests */,
+				F4738C031DB787590090B989 /* Products */,
+				F4738C291DB787920090B989 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4738C031DB787590090B989 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4738C021DB787590090B989 /* SecretLabel-Demo-iOS.app */,
+				F4738C161DB787590090B989 /* SecretLabel-Demo-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4738C041DB787590090B989 /* SecretLabel-Demo-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F4738C051DB787590090B989 /* AppDelegate.swift */,
+				F4738C071DB787590090B989 /* ViewController.swift */,
+				F4738C2A1DB787CF0090B989 /* SecretViewController.swift */,
+				F4CA61FE1DC0BF25004A467B /* LCDBackgroundView.swift */,
+				F4738C0C1DB787590090B989 /* Assets.xcassets */,
+				F4CA61FA1DBE931A004A467B /* LaunchScreen.storyboard */,
+				F4738C111DB787590090B989 /* Info.plist */,
+			);
+			path = "SecretLabel-Demo-iOS";
+			sourceTree = "<group>";
+		};
+		F4738C191DB787590090B989 /* SecretLabel-Demo-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4738C1A1DB787590090B989 /* SecretLabel_Demo_iOSTests.swift */,
+				F4738C1C1DB787590090B989 /* Info.plist */,
+			);
+			path = "SecretLabel-Demo-iOSTests";
+			sourceTree = "<group>";
+		};
+		F4738C291DB787920090B989 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4738C251DB7878B0090B989 /* SDGSecretLabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4738C011DB787590090B989 /* SecretLabel-Demo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4738C1F1DB787590090B989 /* Build configuration list for PBXNativeTarget "SecretLabel-Demo-iOS" */;
+			buildPhases = (
+				F4738BFE1DB787590090B989 /* Sources */,
+				F4738BFF1DB787590090B989 /* Frameworks */,
+				F4738C001DB787590090B989 /* Resources */,
+				F4738C281DB7878B0090B989 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SecretLabel-Demo-iOS";
+			productName = "SecretLabel-Demo-iOS";
+			productReference = F4738C021DB787590090B989 /* SecretLabel-Demo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4738C151DB787590090B989 /* SecretLabel-Demo-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4738C221DB787590090B989 /* Build configuration list for PBXNativeTarget "SecretLabel-Demo-iOSTests" */;
+			buildPhases = (
+				F4738C121DB787590090B989 /* Sources */,
+				F4738C131DB787590090B989 /* Frameworks */,
+				F4738C141DB787590090B989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4738C181DB787590090B989 /* PBXTargetDependency */,
+			);
+			name = "SecretLabel-Demo-iOSTests";
+			productName = "SecretLabel-Demo-iOSTests";
+			productReference = F4738C161DB787590090B989 /* SecretLabel-Demo-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4738BFA1DB787590090B989 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "☠️👽🤖👻";
+				TargetAttributes = {
+					F4738C011DB787590090B989 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+					F4738C151DB787590090B989 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PX2V2LNF9X;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F4738C011DB787590090B989;
+					};
+				};
+			};
+			buildConfigurationList = F4738BFD1DB787590090B989 /* Build configuration list for PBXProject "SecretLabel-Demo-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4738BF91DB787590090B989;
+			productRefGroup = F4738C031DB787590090B989 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4738C011DB787590090B989 /* SecretLabel-Demo-iOS */,
+				F4738C151DB787590090B989 /* SecretLabel-Demo-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4738C001DB787590090B989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4738C0D1DB787590090B989 /* Assets.xcassets in Resources */,
+				F4CA61FB1DBE931A004A467B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4738C141DB787590090B989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4738BFE1DB787590090B989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CA61FF1DC0BF25004A467B /* LCDBackgroundView.swift in Sources */,
+				F4738C081DB787590090B989 /* ViewController.swift in Sources */,
+				F4738C061DB787590090B989 /* AppDelegate.swift in Sources */,
+				F4738C2B1DB787CF0090B989 /* SecretViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4738C121DB787590090B989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4738C1B1DB787590090B989 /* SecretLabel_Demo_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4738C181DB787590090B989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4738C011DB787590090B989 /* SecretLabel-Demo-iOS */;
+			targetProxy = F4738C171DB787590090B989 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F4738C1D1DB787590090B989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4738C1E1DB787590090B989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4738C201DB787590090B989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "SecretLabel-Demo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.darg.SecretLabel-Demo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F4738C211DB787590090B989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "SecretLabel-Demo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.darg.SecretLabel-Demo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F4738C231DB787590090B989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PX2V2LNF9X;
+				INFOPLIST_FILE = "SecretLabel-Demo-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.darg.SecretLabel-Demo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretLabel-Demo-iOS.app/SecretLabel-Demo-iOS";
+			};
+			name = Debug;
+		};
+		F4738C241DB787590090B989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PX2V2LNF9X;
+				INFOPLIST_FILE = "SecretLabel-Demo-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.darg.SecretLabel-Demo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretLabel-Demo-iOS.app/SecretLabel-Demo-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4738BFD1DB787590090B989 /* Build configuration list for PBXProject "SecretLabel-Demo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4738C1D1DB787590090B989 /* Debug */,
+				F4738C1E1DB787590090B989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4738C1F1DB787590090B989 /* Build configuration list for PBXNativeTarget "SecretLabel-Demo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4738C201DB787590090B989 /* Debug */,
+				F4738C211DB787590090B989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4738C221DB787590090B989 /* Build configuration list for PBXNativeTarget "SecretLabel-Demo-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4738C231DB787590090B989 /* Debug */,
+				F4738C241DB787590090B989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4738BFA1DB787590090B989 /* Project object */;
+}
