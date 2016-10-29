@@ -9,11 +9,7 @@ Swift 3.0 Implementation of 'The Secret' apps' Text Animation.
 
 
 
--  SAMPLE USAGE:
-
-'''swift'
-start(.whispering, newString: "Hello, World!", newFont: .systemFont(ofSize: 50, weight: UIFontWeightBold), newAlignment: .center, reverses: (true, delay: 1), completion = { print("finished") } )
-'''
+coming soon...
 
 ## Acknowledgments
 
