@@ -54,8 +54,7 @@ Swift 3.0 Implementation of 'The Secret' apps' Text Animation.
 ## Suggested Resources
 
 [Awesome-iOS](https://github.com/vsouza/awesome-ios)
-- THE best list of awesome iOS Open-Source Objective-C and Swift Projects! 
-    (maintained by [vsouza](https://github.com/vsouza))
+- THE best list of awesome iOS Open-Source Objective-C and Swift Projects by [vsouza](https://github.com/vsouza))
 
 
 [Build Time Analyzer for Xcode](https://github.com/RobertGummesson/BuildTimeAnalyzer-for-Xcode)
