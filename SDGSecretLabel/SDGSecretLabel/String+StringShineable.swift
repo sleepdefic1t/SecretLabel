@@ -33,9 +33,7 @@ extension String {
                       newAlignment: NSTextAlignment? = .center,
                       reverses: (Bool, delay: Int)? = (false, 0),
                       with completion: (() -> Void)? = nil) {
-        
-      
-        
+                
         controller.start(state,
                          newString: self,
                          newFont: newFont,
