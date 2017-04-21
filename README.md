@@ -1,11 +1,12 @@
 # SecretLabel
 
-Swift 3.0 Implementation of 'The Secret' apps' Text Animation.
+Swift 3.1 Implementation of 'The Secret' apps' Text Animation.
 
-[![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)](https://github.com/apple/swift)
-![Platform](https://img.shields.io/badge/platform-iOS-blue.svg)
-[![BUILD](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/deadAlienRobotGhost/SecretLabel)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-brightgreen.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![Swift Version](https://img.shields.io/badge/swift-3.1-brightgreen.svg?style=flat)](https://github.com/apple/swift)
+[![Xcode Version](https://img.shields.io/badge/xcode-8.3-brightgreen.svg?style=flat)](https://developer.apple.com/xcode/)
+![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg?style=flat)
+[![BUILD](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat)](https://github.com/deadAlienRobotGhost/SecretLabel)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-brightgreen.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ![SecretLabel](https://github.com/deadAlienRobotGhost/SecretLabel/blob/master/SecretLabel.gif)
 
