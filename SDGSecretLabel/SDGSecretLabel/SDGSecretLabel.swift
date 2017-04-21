@@ -10,13 +10,14 @@ import Foundation
 
 open class SDGSecretLabel {
     
-    
-    /*
-     ====================================================================================================
-     -  Sets Default Values for Secret Label
-     ====================================================================================================
-     */
-    
+    var duration: CGFloat = 3.0
+    var intervals: Intervals = .zero
+    var lifetime: LifeTime = LifeTime(birth: 0, death: 0)
+   
+    public var state: SecretState = .waiting
+    public var presenting: UILabel = UILabel()
+    public var secretString: NSMutableAttributedString = NSMutableAttributedString()
+
     public init() {
     
         presenting.frame = UIScreen.main.bounds
@@ -27,45 +28,31 @@ open class SDGSecretLabel {
         presenting.autoresizingMask = UIViewAutoresizing.flexibleWidth.union(.flexibleHeight)
     
     }
-    
-    /*
-     ====================================================================================================
-     -  Sets Default Values for Secret Label
-     ====================================================================================================
-     */
-    var duration: CGFloat = 3.0
-    
-    public var presenting: UILabel = UILabel()
-    
-    public var secretString: NSMutableAttributedString = NSMutableAttributedString()
 
+}
+
+extension SDGSecretLabel {
     
-    
-    /*
-     ====================================================================================================
-     -  Sets Default Values for Secret Label
-     ====================================================================================================
-     */
-    var intervals: Intervals = .zero
+/*
+ ====================================================================================================
+ -  Sets animation duration between characters
+ ====================================================================================================
+ */
     
     struct Intervals {
         
         var durations: [CGFloat], delays: [CGFloat]
         
         static var zero: Intervals { return Intervals(durations: [], delays: []) }
-    
 
     }
     
-    
-    
-    
-    /*
-     ====================================================================================================
-     -  Sets Start(birth) and End(death)-times; or "LifeTime" for the Secret Animation
-     ====================================================================================================
-     */
-    var lifetime: LifeTime = LifeTime(birth: 0, death: 0)
+
+/*
+ ====================================================================================================
+ -  Sets Start(birth) and End(death)-times; or "LifeTime" for the Secret Animation
+ ====================================================================================================
+ */
     
     struct LifeTime {
         
@@ -81,14 +68,12 @@ open class SDGSecretLabel {
     }
     
     
-    /*
-     ====================================================================================================
-     -  Secret Animation State Enumeration; includes reverse for fading back out/in after animation
-     ====================================================================================================
-     */
-    
-    public var state: SecretState = .waiting
-    
+/*
+ ====================================================================================================
+ -  Secret Animation State Enumeration; includes reverse for fading back out/in after animation
+ ====================================================================================================
+ */
+
     public enum SecretState  {
         
         /* -  Ready  /  Fade In  / Fade Out - */
@@ -105,7 +90,5 @@ open class SDGSecretLabel {
         }
         
     }
-    
-    
     
 }

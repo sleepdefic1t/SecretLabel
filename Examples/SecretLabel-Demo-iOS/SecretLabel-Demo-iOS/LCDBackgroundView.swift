@@ -10,13 +10,12 @@ import UIKit
 
 class LCDBackgroundView: UIView {
     
-    
-    /*
-     ====================================================================================================
-     -  Gradient Layer Overlay
-     ====================================================================================================
-     -  gradientColors Array steps from color1 to color2, then back to color1
-     */
+/*
+ ====================================================================================================
+ -  Gradient Layer Overlay
+ ====================================================================================================
+ -  gradientColors Array steps from color1 to color2, then back to color1
+ */
     
     let gradientColor1: CGColor = UIColor(red: 0.417, green: 0.419, blue: 0.172, alpha:0.45).cgColor
     let gradientColor2: CGColor = UIColor(red: 0.329, green: 0.38, blue: 0.14, alpha:0.8).cgColor
@@ -27,12 +26,11 @@ class LCDBackgroundView: UIView {
     let gradient2: CAGradientLayer = CAGradientLayer()
     
     
-    
-    /*
-     ====================================================================================================
-     -  Blur Effect Overlay
-     ====================================================================================================
-     */
+/*
+ ====================================================================================================
+ -  Blur Effect Overlay
+ ====================================================================================================
+ */
     
     let blurView = UIVisualEffectView(
         effect: UIBlurEffect(
@@ -40,28 +38,30 @@ class LCDBackgroundView: UIView {
         )
     )
     
+}
 
 
-    /*
-     ====================================================================================================
-     -  View LifeCycle
-     ====================================================================================================
-     -  Loads Parameters after view moves to window.
-     */
-    
+/*
+ ====================================================================================================
+ -  View LifeCycle
+ ====================================================================================================
+ -  Loads parameters after view moves to window.
+ */
+extension LCDBackgroundView {
+
     override func didMoveToWindow() {
         
         autoresizingMask = UIViewAutoresizing.flexibleWidth.union(.flexibleHeight)
         backgroundColor = .clear
         
         
-        /*
-         ==================================================
-         -  Gradient: Parameters
-         ==================================================
-         -  Sets Start & End-Points for gradient1 & gradient2
-         -  'For-Loop': There's no sense in writing identical properties twice. 6-lines > 8-lines
-         */
+    /*
+     ==================================================
+     -  Gradient: Parameters
+     ==============================
+     -  Sets Start & End-Points for gradient1 & gradient2
+     -  'For-Loop': There's no sense in writing identical properties twice. 6-lines > 8-lines
+     */
         
         gradient1.startPoint = CGPoint(x: 0.0, y: 1.0) // bottom-left
         gradient1.endPoint = CGPoint(x: 1.0, y: 0.0) // top-right
@@ -79,12 +79,12 @@ class LCDBackgroundView: UIView {
         }
         
         
-        /*
-         ==================================================
-         -  Blur: Parameters
-         ==================================================
-         -  Sets blurView frame & autoresizing mask
-         */
+    /*
+     ==================================================
+     -  Blur: Parameters
+     ==============================
+     -  Sets blurView frame & autoresizing mask
+     */
         
         blurView.frame = self.frame
         blurView.autoresizingMask = self.autoresizingMask
@@ -94,25 +94,20 @@ class LCDBackgroundView: UIView {
     }
 
     
+/*
+ ==================================================
+ - Layout Change Detection: Screen Rotation, etc.
+ ==============================
+ -  Guard-Checks for sublayers at layout-change;
+ -  Sets layer frames to self.frame
+ */
+
     override func layoutSubviews() {
-        
-        /*
-         ==================================================
-         - Layout Change Detect: Screen Rotation, etc.
-         ==================================================
-         -  Guard-Checks for sublayers at layout-change;
-         -  Sets layer frames to self.frame
-         */
         
         guard let sublayers = self.layer.sublayers else { return }
         
-        for layer in sublayers {
-            
-            layer.frame = self.frame
-            
-        }
+        for layer in sublayers { layer.frame = self.frame }
         
     }
-
 
 }

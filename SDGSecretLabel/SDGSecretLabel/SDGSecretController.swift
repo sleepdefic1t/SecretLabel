@@ -8,15 +8,8 @@
 
 public class SDGSecretController: NSObject {
     
-    
-    
-    
     var blocks: [BlockOperation] = []
-    
     var label: SDGSecretLabel!
-    
-    
-    
     
     required public init(for label: SDGSecretLabel) {
         
@@ -24,24 +17,27 @@ public class SDGSecretController: NSObject {
         
     }
     
-    
-    /*
-     ====================================================================================================
-     -  Entry-point for Secret Animation
-     ====================================================================================================
-     ====================================================================================================
-     
-     -  SAMPLE USAGE:
-     
-         start(.whispering,
-                newString: "Hello, World!".
-                newFont: .systemFont(ofSize: 50, weight: UIFontWeightBold),
-                newAlignment: .center,
-                reverses: (true, delay: 1),
-                completion = { print("finished") } )
-     
-     ====================================================================================================
-     */
+}
+
+extension SDGSecretController {
+
+/*
+ ====================================================================================================
+ -  Entry-point for Secret Animation
+ ====================================================================================================
+ ====================================================================================================
+ 
+ -  SAMPLE USAGE:
+ 
+     start(.whispering,
+            newString: "Hello, World!".
+            newFont: .systemFont(ofSize: 50, weight: UIFontWeightBold),
+            newAlignment: .center,
+            reverses: (true, delay: 1),
+            completion = { print("finished") } )
+ 
+ ====================================================================================================
+ */
     
     public func start(
         _ state: SDGSecretLabel.SecretState,
@@ -51,20 +47,20 @@ public class SDGSecretController: NSObject {
                       reverses: (Bool, delay: Int)? = (false, 0),
                       with completion: (() -> Void)? = nil) {
         
-        /*
-         ==================================================
-         -  weakSelf: makes self autorelease
-         -  safeSelf: guards weakSelf - Ensures auto-releasing self is currently available; or we will safely return from fuction.
-         ==================================================
-         */
+    /*
+     ==================================================
+     -  weakSelf: makes self autorelease
+     -  safeSelf: guards weakSelf - Ensures auto-releasing self is currently available; or we will safely return from fuction.
+     ==================================================
+     */
         weak var weakSelf: SDGSecretController? { return self }
         guard let safeSelf: SDGSecretController = weakSelf, let safeLabel = weakSelf?.label else { return }
         
         
         if self.label.secretString.string != newString {
-            
-            /*  ==================================================  */
-            /* This is the Initial Leading Animation Block */
+        
+        /*  ==================================================  */
+        /* This is the Initial Leading Animation Block */
             let newShineBlock = BlockOperation() {
                 
                 if let font = newFont { safeLabel.presenting.font = font } /* Sets New Font if not nil */
@@ -90,9 +86,9 @@ public class SDGSecretController: NSObject {
             
         }
 
-        
-        /*  ==================================================  */
-        /* Only added if the Secrets Animation is set to reverse upon finishing */
+    
+    /*  ==================================================  */
+    /* Only added if the Secrets Animation is set to reverse upon finishing */
         if let reverse = reverses, (reverse.0 == true) {
 
             let reversal = BlockOperation() {
@@ -102,9 +98,9 @@ public class SDGSecretController: NSObject {
             safeSelf.blocks.append(reversal)
             
         }
-        
-        /*  ==================================================  */
-        /* Completion Block added to blocks if present */
+    
+    /*  ==================================================  */
+    /* Completion Block added to blocks if present */
         if let completion = completion {
             
             safeSelf.blocks.append( BlockOperation( block: completion) )
@@ -114,14 +110,13 @@ public class SDGSecretController: NSObject {
         safeSelf.blocks.run() /* Starts Animations in Custom Block-Queue */
         
     }
+
     
-    
-    
-    /*
-     ====================================================================================================
-     -  Randomizes Secret Animation Character Intervals
-     ====================================================================================================
-     */
+/*
+ ====================================================================================================
+ -  Randomizes Secret Animation Character Intervals
+ ====================================================================================================
+ */
 
     func randomizeIntervals(for label: SDGSecretLabel) {
         
@@ -145,25 +140,22 @@ public class SDGSecretController: NSObject {
     
     
     
-    /*
-     ====================================================================================================
-     -  Sets Initial Attributes for new Secret String
-     ====================================================================================================
-     */
+/*
+ ====================================================================================================
+ -  Sets Initial Attributes for new Secret String
+ ====================================================================================================
+ */
     
     func initialString(from string: String) -> NSMutableAttributedString  {
 
         /*  ==================================================  */
         let attributed = NSMutableAttributedString(string: string)
         
-        
         /*  ==================================================  */
         let paragraphyStyle = NSMutableParagraphStyle()
             paragraphyStyle.alignment = label.presenting.textAlignment
             paragraphyStyle.lineSpacing = 10
         
-
-
         /*  ==================================================  */
         let attributes: [[String : Any]] = [
             [NSForegroundColorAttributeName : label.presenting.textColor.withAlphaComponent(0)],
@@ -173,7 +165,6 @@ public class SDGSecretController: NSObject {
         ]
         
         attributed.beginEditing()
-        
         
         /*  ==================================================  */
         attributed.enumerateAttribute(NSForegroundColorAttributeName,
@@ -193,33 +184,29 @@ public class SDGSecretController: NSObject {
         return attributed.mutableCopy() as! NSMutableAttributedString
         
     }
-
     
-    
-    /*
-     ====================================================================================================
-     -  Updates Secret String Attributes During Animation
-     ====================================================================================================
-     */
+/*
+ ====================================================================================================
+ -  Updates Secret String Attributes During Animation
+ ====================================================================================================
+ */
     
     func updateString() {
         
         let now = CACurrentMediaTime()
-        
-        /*
-         ==================================================
-         -  weakSelf: makes self autorelease
-         -  safeSelf: guards weakSelf - Ensures auto-releasing self is currently available; or we will safely return from fuction.
-         -  safeLabel: guards weakSelf's label
-         ==================================================
-         */
+    
+    /*
+     ==================================================
+     -  weakSelf: makes self autorelease
+     -  safeSelf: guards weakSelf - Ensures auto-releasing self is currently available; or we will safely return from fuction.
+     -  safeLabel: guards weakSelf's label
+     ==================================================
+     */
         weak var weakSelf: SDGSecretController? { return self }
         guard let safeSelf = weakSelf, let safeLabel = weakSelf?.label else { return }
         
         /*  ==================================================  */
         for index in 0..<safeLabel.secretString.length {
-            
-            
             
             /*  ==================================================  */
             var percent =
@@ -233,9 +220,7 @@ public class SDGSecretController: NSObject {
             
             if percent > 1 { percent = 1 }
             
-            
             /*  ==================================================  */
-
             let shadow = NSShadow()
                 shadow.shadowColor = UIColor.black.withAlphaComponent(percent*0.75)
                 shadow.shadowBlurRadius = 3
@@ -243,7 +228,6 @@ public class SDGSecretController: NSObject {
             
 
             /*  ==================================================  */
-
             let characterAlpha = [NSForegroundColorAttributeName : safeLabel.presenting.textColor.withAlphaComponent(percent)]
             let shadowAlpha = [NSShadowAttributeName : shadow]
             
@@ -251,7 +235,6 @@ public class SDGSecretController: NSObject {
             safeLabel.secretString.addAttributes(shadowAlpha, range: NSMakeRange(index, 1))
             
             safeLabel.presenting.attributedText = safeLabel.secretString
-            
             
             /*  ==================================================  */
             if now > safeLabel.lifetime.death, index == safeLabel.secretString.length-1 {
@@ -274,8 +257,5 @@ public class SDGSecretController: NSObject {
         }
         
     }
-    
-    
-    
     
 }

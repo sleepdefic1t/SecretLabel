@@ -171,12 +171,13 @@
 				TargetAttributes = {
 					F4738BD21DB785280090B989 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 					F4738BDB1DB785280090B989 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PX2V2LNF9X;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};

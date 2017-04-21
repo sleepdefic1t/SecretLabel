@@ -11,73 +11,83 @@ import SDGSecretLabel
 
 class SecretViewController: UIViewController {
     
+    fileprivate var isReady: Bool = false
     
     var secretLabel: SDGSecretLabel = SDGSecretLabel()
-    
     var secretController: SDGSecretController { return SDGSecretController(for: self.secretLabel) }
-    
     var lcdBackgroundView: LCDBackgroundView { return LCDBackgroundView(frame: self.view.frame) }
     
-    
-    override func updateViewConstraints() {
-        Swift.print("update")
-    }
-    
+}
+
+
+/*
+ ====================================================================================================
+ -  Lifecycle
+ ====================================================================================================
+ */
+
+extension SecretViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         view.frame = UIScreen.main.bounds
-        
         view.autoresizingMask = UIViewAutoresizing.flexibleWidth.union(.flexibleHeight)
-
         view.addSubview(lcdBackgroundView)
-        
         view.addSubview(secretLabel.presenting)
         
+        startWelcomeAnimation()
         
-        /*  Welcome Animation   */
+    }
+    
+    override public func touchesEnded(_ touches: Set<UITouch>,
+                                      with event: UIEvent?) {
+        
+        super.touchesEnded(touches, with: event)
+        
+        if self.isReady == true { setupPresentation() }
+ 
+    }
+    
+}
+
+
+/*
+ ====================================================================================================
+ -  Animations
+ ====================================================================================================
+ */
+
+extension SecretViewController {
+
+/*  ==================================================
+ -   Begins Welcome Animation;
+ */
+    internal func startWelcomeAnimation() {
+        
         "Welcome".start(.whispering,
                         using: self.secretController,
                         newFont: .systemFont(ofSize: 75, weight: UIFontWeightBold),
                         newAlignment: .center,
                         reverses: (true, delay: 0)) {
-        
+                            
             "touch to begin".start(.whispering,
                                    using: self.secretController,
                                    newFont: .systemFont(ofSize: 50, weight: UIFontWeightBold)) { self.isReady = true }
-                            
+            
         }
+        
     }
     
     
-    
-    
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
+/*  ==================================================
+ -   Fades-out Welcome Animation; calls Secret Presentation Animation
+ */
 
-        if self.isReady == true { prepareForPresentation() }
- 
-    }
-    
-    
-    /*
-     ====================================================================================================
-     -  Secret Presentation
-     ====================================================================================================
-     */
-    
-    fileprivate var isReady: Bool = false
-
-    fileprivate func prepareForPresentation() {
+    fileprivate func setupPresentation() {
         
         isReady = false
         
-        
-        /*  ==================================================
-        -   Fades-out Welcome Animation; calls Secret Presentation Animation
-        */
-
         UIView.animate(withDuration: 2,
                        delay: 0,
                        options: UIViewAnimationOptions.curveEaseInOut,
@@ -93,10 +103,11 @@ class SecretViewController: UIViewController {
                 
         })
     }
+    
 
-    /*  ==================================================
-     -  Secret Presentation Animation 
-     */
+/*  ==================================================
+ -  Secret Presentation Animation 
+ */
     
     fileprivate func presentDemoAnimation() {
         
